@@ -1,0 +1,19 @@
+<div class="site-branding">
+  <h1 class="site-title">
+    <a href="/" rel="home">{{ .Site.Title }}</a>
+  </h1>
+
+  {{ with .Site.Params.description }}
+    <p class="site-description">
+      {{ . }}
+    </p>
+  {{ end }}
+
+  <nav id="site-navigation" class="main-navigation" aria-label="Top Menu">
+
+  </nav>
+
+  <nav class="social-navigation" aria-label="Social Links Menu">
+
+  </nav>
+</div>

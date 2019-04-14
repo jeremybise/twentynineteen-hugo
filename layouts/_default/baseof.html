@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>{{ if .Title }} {{ .Title }} | {{ end }}{{ $.Site.Title }}</title>
+
+  {{ if .Site.IsServer }}
+  {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
+  {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
+  {{ else }}
+  {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
+  {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" />
+  {{ end }}
+
+  {{ block "header_scripts" . }}
+  <!-- Optional header scripts -->
+  {{ end }}
+
+  {{ block "header_styles" . }}
+  <!-- Optional header styles -->
+  {{ end }}
+</head>
+
+<body>
+  <div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    {{ partial "header" . }}
+
+    <div id="content" class="site-content">
+      {{ block "main" . }}{{ end }}
+    </div>
+
+    {{ partial "footer" .}}
+    
+  </div>
+
+  {{ block "footer_scripts" . }}
+  <!-- Optional footer scripts. -->
+  {{ end }}
+</body>
