@@ -1,0 +1,20 @@
+<li class="menu-item">
+  <a href="{{ .URL }}">
+    <span class="screen-reader-text">{{ .Name }}</span>
+    {{ if (eq .Identifier "twitter") }}
+      {{ partial "icons/social/twitter" }}
+    {{ end }}
+    {{ if (eq .Identifier "twitch") }}
+      {{ partial "icons/social/twitch" }}
+    {{ end }}
+    {{ if (eq .Identifier "amazon") }}
+      {{ partial "icons/social/amazon" }}
+    {{ end }}
+    {{ if (eq .Identifier "apple") }}
+      {{ partial "icons/social/apple" }}
+    {{ end }}
+    {{ if (eq .Identifier "vimeo") }}
+      {{ partial "icons/social/vimeo" }}
+    {{ end }}
+  </a>
+</li>
