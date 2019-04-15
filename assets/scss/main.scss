@@ -47,3 +47,12 @@ $color__border-abbr: #666;
 @import "site/secondary/widgets";
 @import "blocks/blocks";
 @import "media/media";
+
+.entry-footer svg {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}

@@ -6,7 +6,6 @@
       </h2>
     </header>
 
-    <!-- TODO: add figure for featured image -->
     {{ if .Params.image }}
       <figure class="post-thumbnail">
         <a class="post-thumbnail-inner" href="{{ .RelPermalink }}" aria-hidden="true">
@@ -23,8 +22,9 @@
       <!-- TODO: byline and category -->
       <span class="posted-on">
         <!-- TODO: Add clock SVG icon -->
+        {{ partial "icons/ui/watch" }}
         {{ $dateFormat := $.Site.Params.dateFormat | default "January 2, 2006" }}
-        {{ .PublishDate.Format $dateFormat }}
+        <a href="{{ .RelPermalink }}">{{ .PublishDate.Format $dateFormat }}</a>
       </span>
     </footer>
   </article>
