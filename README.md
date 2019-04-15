@@ -12,6 +12,12 @@ From the root of your site:
 git submodule add https://github.com/jeremybise/twentynineteen-hugo.git themes/twentynineteen-hugo
 ```
 
+In your `config.toml`, add the following:
+
+```
+theme = "twentynineteen-hugo"
+```
+
 ## Updating
 
 From the root of your site:
