@@ -6,15 +6,10 @@
   
   <title>{{ if .Title }} {{ .Title }} | {{ end }}{{ $.Site.Title }}</title>
 
-  {{ if .Site.IsServer }}
-  {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
-  {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
-  {{ else }}
-  {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
-  {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" />
-  {{ end }}
+  {{ $themeScss := "scss/main.scss" }}
+  {{ $options := (dict "targetPath" "css/main.css") }}
+  {{ $themeCss := resources.Get $themeScss | resources.ExecuteAsTemplate $themeScss . | toCSS $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $themeCss.Permalink }}">
 
   {{ block "header_scripts" . }}
   <!-- Optional header scripts -->
