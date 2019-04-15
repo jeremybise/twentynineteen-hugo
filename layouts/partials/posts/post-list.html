@@ -7,6 +7,13 @@
     </header>
 
     <!-- TODO: add figure for featured image -->
+    {{ if .Params.image }}
+      <figure class="post-thumbnail">
+        <a class="post-thumbnail-inner" href="{{ .RelPermalink }}" aria-hidden="true">
+          <img src="{{ .Params.image }}" />
+        </a>
+      </figure>
+    {{ end }}
 
     <div class="entry-content">
       {{ .Summary }}

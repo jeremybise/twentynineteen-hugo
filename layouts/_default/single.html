@@ -1,7 +1,9 @@
 {{ define "entry_header" }}
-  <div class="site-featured-image">
-    Entry header...
-  </div>
+  {{ with .Params.image }}
+    <div class="site-featured-image">
+      Entry header...
+    </div>
+  {{ end }}
 {{ end }}
 
 {{ define "main" }}

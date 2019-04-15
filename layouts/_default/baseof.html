@@ -20,7 +20,7 @@
   {{ end }}
 </head>
 
-<body>
+<body class="{{ if .Site.Params.enable_image_filters }}image-filters-enabled {{ end }}">
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
@@ -29,7 +29,9 @@
         {{ partial "header/site-branding" . }}
       </div><!-- .layout-wrap -->
 
-      {{ block "entry_header" . }}{{ end }}
+      {{ block "entry_header" . }}
+        <!-- For single posts and pages, special treatment if there's a featured image -->
+      {{ end }}
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
