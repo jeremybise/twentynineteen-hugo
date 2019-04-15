@@ -1,21 +1,33 @@
 # Twenty Nineteen Hugo
 
-This is a port of the WordPress Twenty Nineteen theme to Hugo. It's a work in progress right now.
+**NOTE: BIG FAT WORK IN PROGRESS. JUST STARTING.**
 
-## Installation Instructions
+This is a port of the WordPress Twenty Nineteen theme to Hugo.
 
-`git submodule whatever`
+## Installation
+
+From the root of your site:
+
+```
+git submodule add https://github.com/jeremybise/twentynineteen-hugo.git themes/twentynineteen-hugo
+
+```
+
+## Updating
+
+From the root of your site:
+
+```
+git submodule update --remote --merge
+```
 
 ## Highlights
 
 - Accent color configurable via config.toml
-- Featured image treatment using accent color works (maybe???)
-- Social menu in header actually renders the icon (maybe???)
-- Search via Fuse.js included
-- Google Analytics code configurable via config.toml
+- Featured images and image filter effect works
+- Social menu icons all ported using Hugo's built-in menus
 
 ## Differences from original theme
 
-- Comment related stuff has been omitted
-- Author related stuff has been omitted
-- The article lists show summaries rather than full content
+- Comment stuff has been omitted
+- Author stuff has been omitted
