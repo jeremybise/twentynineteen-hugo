@@ -1,0 +1,14 @@
+name = "TwentyNineteen Hugo"
+license = "CC BY 4.0"
+licenselink = "https://creativecommons.org/licenses/by/4.0/"
+description = "The TwentyNineteen WordPress theme ported to Hugo."
+homepage = "https://github.com/jeremybise/twentynineteen-hugo"
+tags = ["blog", "clean", "color configuration"]
+features = ["blog", "clean", "color configuration"]
+min_version = "0.54.0"
+
+[author]
+  name = "Jeremy Bise"
+  homepage = "https://jeremybise.com/"
+
+[original]
