@@ -10,7 +10,6 @@ From the root of your site:
 
 ```
 git submodule add https://github.com/jeremybise/twentynineteen-hugo.git themes/twentynineteen-hugo
-
 ```
 
 ## Updating
