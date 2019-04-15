@@ -32,7 +32,11 @@
     {{ partial "header" . }}
 
     <div id="content" class="site-content">
-      {{ block "main" . }}{{ end }}
+      <section id="primary" class="content-area">
+        <main id="main" class="site-main">
+          {{ block "main" . }}{{ end }}
+        </main>
+      </section>
     </div>
 
     {{ partial "footer" .}}

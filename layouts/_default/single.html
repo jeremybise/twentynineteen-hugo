@@ -1,4 +1,11 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <article class="post entry">
+    <header class="entry-header">
+      <h1 class="entry-title">{{ .Title }}</h1>
+    </header>
+    <div class="entry-content">
+      {{ .Content }}
+    </div>
+    <div class="entry-footer"></div>
+  </article>
 {{ end }}

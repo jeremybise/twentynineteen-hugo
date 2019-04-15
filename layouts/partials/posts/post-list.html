@@ -1,0 +1,24 @@
+{{ range where .Pages.ByPublishDate.Reverse "Section" "posts" }}
+  <article class="post entry">
+    <header class="entry-header">
+        <h2 class="entry-title">
+          <a href="{{ .RelPermalink }}" rel="bookmark">{{.Title}}</a>
+        </h2>
+    </header>
+
+    <!-- TODO: add figure for featured image -->
+
+    <div class="entry-content">
+      {{ .Summary }}
+    </div>
+    
+    <footer class="entry-footer">
+      <!-- TODO: byline and category -->
+      <span class="posted-on">
+        <!-- TODO: Add clock SVG icon -->
+        {{ $dateFormat := $.Site.Params.dateFormat | default "January 2, 2006" }}
+        {{ .PublishDate.Format $dateFormat }}
+      </span>
+    </footer>
+  </article>
+{{ end }}
