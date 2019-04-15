@@ -24,7 +24,7 @@
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-    <header id="masthead" class="site-header">
+    <header id="masthead" class="site-header {{ if .Params.image }}featured-image{{ end }}">
       <div class="site-branding-container">
         {{ partial "header/site-branding" . }}
       </div><!-- .layout-wrap -->

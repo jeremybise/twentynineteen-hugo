@@ -19,13 +19,7 @@
     </div>
     
     <footer class="entry-footer">
-      <!-- TODO: byline and category -->
-      <span class="posted-on">
-        <!-- TODO: Add clock SVG icon -->
-        {{ partial "icons/ui/watch" }}
-        {{ $dateFormat := $.Site.Params.dateFormat | default "January 2, 2006" }}
-        <a href="{{ .RelPermalink }}">{{ .PublishDate.Format $dateFormat }}</a>
-      </span>
+      {{ partial "entry-meta" . }}
     </footer>
   </article>
 {{ end }}

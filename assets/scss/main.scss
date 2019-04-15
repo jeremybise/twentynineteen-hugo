@@ -48,7 +48,7 @@ $color__border-abbr: #666;
 @import "blocks/blocks";
 @import "media/media";
 
-.entry-footer svg {
+.entry-footer svg, .entry-meta svg {
   width: 16px;
   height: 16px;
   position: relative;

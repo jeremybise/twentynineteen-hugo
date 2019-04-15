@@ -31,6 +31,10 @@ git submodule update --remote --merge
 - Comment stuff has been omitted
 - Author stuff has been omitted
 
+## Frontmatter Notes
+
+- Featured image path should be set in `image`.
+
 ## Available `config.toml` params
 
 - `accent_color = "#FF0000"` Set a custom accent color for links and image filters, if enabled. Defaults to blue.

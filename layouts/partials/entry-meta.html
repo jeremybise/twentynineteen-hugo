@@ -1,0 +1,5 @@
+<span class="posted-on">
+  {{ partial "icons/ui/watch" }}
+  {{ $dateFormat := $.Site.Params.dateFormat | default "January 2, 2006" }}
+  <a href="{{ .RelPermalink }}">{{ .PublishDate.Format $dateFormat }}</a>
+</span>
