@@ -24,7 +24,13 @@
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-    {{ partial "header" . }}
+    <header id="masthead" class="site-header">
+      <div class="site-branding-container">
+        {{ partial "header/site-branding" . }}
+      </div><!-- .layout-wrap -->
+
+      {{ block "entry_header" . }}{{ end }}
+    </header><!-- #masthead -->
 
     <div id="content" class="site-content">
       <section id="primary" class="content-area">
@@ -34,7 +40,7 @@
       </section>
     </div>
 
-    {{ partial "footer" .}}
+    {{ partial "footer" . }}
     
   </div>
 

@@ -1,9 +1,9 @@
 {{ range where .Pages.ByPublishDate.Reverse "Section" "posts" }}
   <article class="post entry">
     <header class="entry-header">
-        <h2 class="entry-title">
-          <a href="{{ .RelPermalink }}" rel="bookmark">{{.Title}}</a>
-        </h2>
+      <h2 class="entry-title">
+        <a href="{{ .RelPermalink }}" rel="bookmark">{{.Title}}</a>
+      </h2>
     </header>
 
     <!-- TODO: add figure for featured image -->
