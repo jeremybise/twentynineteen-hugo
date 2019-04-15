@@ -30,3 +30,10 @@ git submodule update --remote --merge
 
 - Comment stuff has been omitted
 - Author stuff has been omitted
+
+## Available `config.toml` params
+
+- `accent_color = "#FF0000"` Set a custom accent color for links and image filters, if enabled. Defaults to blue.
+- `privacy_link = "/privacy/"` Relative URL to privacy page, if there is one. This enables a Privacy Policy link in the footer.
+- `description = "This is the site tagline."` Adds tagline next to the site title.
+- `enable_image_filters = true|false` Toggles off image color filter feature. Defaults to true.
