@@ -20,7 +20,7 @@
   {{ end }}
 </head>
 
-<body class="{{ if .Site.Params.enable_image_filters }}image-filters-enabled {{ end }}">
+<body class="{{ if not .Site.Params.disable_image_filters }}image-filters-enabled{{ end }}">
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
