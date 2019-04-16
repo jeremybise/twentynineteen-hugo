@@ -1,5 +1,5 @@
 name = "TwentyNineteen Hugo"
-license = "CC BY 4.0"
+license = "MIT"
 licenselink = "https://creativecommons.org/licenses/by/4.0/"
 description = "The TwentyNineteen WordPress theme ported to Hugo."
 homepage = "https://github.com/jeremybise/twentynineteen-hugo"
