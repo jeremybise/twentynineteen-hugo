@@ -31,6 +31,7 @@ git submodule update --remote --merge
 - Accent color configurable via config.toml
 - Featured images and image filter effect works
 - Social menu icons all ported using Hugo's built-in menus
+- Syntax highlighting included with the Monokai Light syntax theme
 
 ## Differences from original theme
 
