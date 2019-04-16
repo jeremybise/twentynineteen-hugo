@@ -11,8 +11,6 @@
   {{ $themeCss := resources.Get $themeScss | resources.ExecuteAsTemplate $themeScss . | toCSS $options | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $themeCss.RelPermalink }}" integrity="{{ $themeCss.Data.Integrity }}" media="screen">
 
-  <link rel="stylesheet" href="/syntax.css" rel="stylesheet" />
-
   {{ block "header_scripts" . }}
   <!-- Optional header scripts -->
   {{ end }}
