@@ -69,6 +69,6 @@ pygmentsCodefences=true
 
 ## Roadmap
 
-- [ ] Subnavigation menu dropdowns
-- [ ] Include search via Lunr or Fuse.js
+- [ ] Navigation menu dropdowns
+- [ ] Include search via Lunr or Fuse
 - [ ] Clean out the SCSS folder
