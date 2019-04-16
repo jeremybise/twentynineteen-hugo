@@ -1,30 +1,22 @@
 # Twenty Nineteen Hugo
 
-**NOTE: BIG FAT WORK IN PROGRESS.**
-
-This is a port of the WordPress Twenty Nineteen theme to Hugo.
+This is a Hugo port of WordPress's Twenty Nineteen theme.
 
 ## Installation
 
 From the root of your site:
 
-```
-git submodule add https://github.com/jeremybise/twentynineteen-hugo.git themes/twentynineteen-hugo
-```
+`git submodule add https://github.com/jeremybise/twentynineteen-hugo.git themes/twentynineteen-hugo`
 
 In your `config.toml`, add the following:
 
-```
-theme = "twentynineteen-hugo"
-```
+`theme = "twentynineteen-hugo"`
 
 ## Updating
 
 From the root of your site:
 
-```
-git submodule update --remote --merge
-```
+`git submodule update --remote --merge`
 
 ## Highlights
 
