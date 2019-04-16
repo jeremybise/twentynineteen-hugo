@@ -8,8 +8,8 @@
 
   {{ $themeScss := "scss/main.scss" }}
   {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
-  {{ $themeCss := resources.Get $themeScss | resources.ExecuteAsTemplate $themeScss . | toCSS $options | fingerprint }}
-  <link rel="stylesheet" href="{{ $themeCss.Permalink }}">
+  {{ $themeCss := resources.Get $themeScss | resources.ExecuteAsTemplate $themeScss . | toCSS $options }}
+  <link rel="stylesheet" href="{{ $themeCss.RelPermalink }}">
 
   <link rel="stylesheet" href="/syntax.css" rel="stylesheet" />
 
