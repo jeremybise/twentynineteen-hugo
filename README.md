@@ -66,3 +66,9 @@ Add these to `config.toml`:
 pygmentsUseClasses=true
 pygmentsCodefences=true
 ```
+
+## Roadmap
+
+- [ ] Subnavigation menu dropdowns
+- [ ] Include search via Lunr or Fuse.js
+- [ ] Clean out the SCSS folder

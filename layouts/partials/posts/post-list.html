@@ -17,7 +17,14 @@
     {{ end }}
 
     <div class="entry-content">
-      {{ .Content }}
+      {{ .Summary | markdownify }}
+      {{ if .Truncated }}
+        <div>
+          <a href="{{ .RelPermalink }}" class="more-link">
+            Continue reading
+          </a>
+        </div>
+      {{ end }}
     </div>
     
     <footer class="entry-footer">
