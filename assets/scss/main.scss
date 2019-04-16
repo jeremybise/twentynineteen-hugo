@@ -56,3 +56,19 @@ $color__border-abbr: #666;
   vertical-align: middle;
   margin-right: 0.25em;
 }
+
+.site-main pre {
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: #fafafa;
+  color: #272822;
+}
+
+.site-main code {
+  background-color: #fafafa;
+  color: #272822;
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  border-radius: 2px;
+}

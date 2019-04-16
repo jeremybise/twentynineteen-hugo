@@ -11,6 +11,8 @@
   {{ $themeCss := resources.Get $themeScss | resources.ExecuteAsTemplate $themeScss . | toCSS $options | fingerprint }}
   <link rel="stylesheet" href="{{ $themeCss.Permalink }}">
 
+  <link rel="stylesheet" href="/syntax.css" rel="stylesheet" />
+
   {{ block "header_scripts" . }}
   <!-- Optional header scripts -->
   {{ end }}

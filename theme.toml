@@ -12,3 +12,6 @@ min_version = "0.54.0"
   homepage = "https://jeremybise.com/"
 
 [original]
+
+pygmentsUseClasses=true
+pygmentsCodefences=true

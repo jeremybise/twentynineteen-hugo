@@ -56,3 +56,12 @@ These go in `config.toml` in a `[params]` section like this:
 - `privacy_link = "/privacy/"` Relative URL to privacy page, if there is one. This enables a Privacy Policy link in the footer.
 - `description = "This is the site tagline."` Adds tagline next to the site title.
 - `disable_image_filters = false` Setting to true disables the color filter feature on images. Defaults to false.
+
+## Syntax Highlighting
+
+Add these to `config.toml`:
+
+```toml
+pygmentsUseClasses=true
+pygmentsCodefences=true
+```
