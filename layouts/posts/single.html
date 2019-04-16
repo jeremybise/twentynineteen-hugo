@@ -1,0 +1,59 @@
+{{ define "entry_header" }}
+  {{ if .Params.image }}
+    <div class="site-featured-image">
+      <figure class="post-thumbnail">
+        <img src="{{ .Params.image }}" />
+      </figure>
+      <div class="entry-header">
+        <h1 class="entry-title">{{ .Title }}</h1>
+        <div class="entry-meta">
+          {{ partial "entry-meta" . }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="post entry">
+    {{ if (not (isset .Params "image")) }}
+      <header class="entry-header">
+        <h1 class="entry-title">{{ .Title }}</h1>
+        <div class="entry-meta">
+          {{ partial "entry-meta" . }}
+        </div>
+      </header>
+    {{ end }}
+    <div class="entry-content">
+      {{ .Content }}
+    </div>
+    <div class="entry-footer">
+      {{ partial "entry-meta" . }}
+    </div>
+  </article>
+  <nav class="navigation post-navigation" role="navigation">
+    <h2 class="screen-reader-text">Post navigation</h2>
+    <div class="nav-links">
+      {{ if .PrevInSection }}
+        <div class="nav-previous">
+          <a href="{{.PrevInSection.Permalink}}" rel="prev">
+            <span class="meta-nav" aria-hidden="true">Previous post</span>
+            <span class="screen-reader-text">Previous post:</span>
+            <br>
+            <span class="post-title">{{.PrevInSection.Title}}</span>
+          </a>
+        </div>
+      {{ end }}
+      {{ if .NextInSection }}
+      <div class="nav-next">
+        <a href="{{.PrevInSection.Permalink}}" rel="next">
+          <span class="meta-nav" aria-hidden="true">Next post</span>
+          <span class="screen-reader-text">Next post:</span>
+          <br>
+          <span class="post-title">{{.NextInSection.Title}}</span>
+        </a>
+      </div>
+    {{ end }}
+    </div>
+  </nav>
+{{ end }}
