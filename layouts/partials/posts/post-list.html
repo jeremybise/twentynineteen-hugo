@@ -26,6 +26,7 @@
   </article>
 {{ end }}
 
+{{ if gt $paginator.TotalPages 1 }}
 <nav class="navigation pagination" role="navigation">
   <h2 class="screen-reader-text">Posts navigation</h2>
   <div class="nav-links">
@@ -52,3 +53,4 @@
     {{ end }}
   </div>
 </nav>
+{{ end }}
