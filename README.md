@@ -1,6 +1,6 @@
 # Twenty Nineteen Hugo
 
-**NOTE: BIG FAT WORK IN PROGRESS. JUST STARTING.**
+**NOTE: BIG FAT WORK IN PROGRESS.**
 
 This is a port of the WordPress Twenty Nineteen theme to Hugo.
 
