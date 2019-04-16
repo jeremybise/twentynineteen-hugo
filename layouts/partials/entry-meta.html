@@ -3,3 +3,17 @@
   {{ $dateFormat := $.Site.Params.dateFormat | default "January 2, 2006" }}
   <a href="{{ .RelPermalink }}">{{ .PublishDate.Format $dateFormat }}</a>
 </span>
+
+{{ $tags := slice }}
+{{ with .Params.tags }}
+<span class="cat-links">
+  {{ partial "icons/ui/tag" }}
+  <span class="screen-reader-text">Posted in</span>
+  {{ range . }}
+  {{ $href := print ("tags/" | absLangURL) (. | urlize) "/" }}
+  {{ $element := printf "<a href=\"%s\" rel=\"category tag\">%s</a>" $href . }}
+  {{ $tags = $tags | append $element }}
+  {{ end }}
+  {{ delimit $tags ", " }}
+</span>
+{{ end }}
