@@ -52,15 +52,22 @@ These go in `config.toml` in a `[params]` section like this:
 
 ## Syntax Highlighting
 
-Add these to `config.toml`:
+Add pygments config to your `config.toml`:
 
 ```toml
 pygmentsUseClasses=true
 pygmentsCodefences=true
 ```
 
+## Google Analytics
+
+Add your Google Analytics Tracking Code ID to your `config.toml`:
+
+```googleAnalytics = "UA-123-45"```
+
+The asynchronous tracking script will be included on pages on the live server, but not the dev server.
+
 ## Roadmap
 
 - [ ] Navigation menu dropdowns
 - [ ] Include search via Lunr or Fuse
-- [ ] Clean out the SCSS folder
