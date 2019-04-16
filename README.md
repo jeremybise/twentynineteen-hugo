@@ -2,6 +2,13 @@
 
 This is a Hugo port of WordPress's Twenty Nineteen theme.
 
+## Highlights
+
+- Accent color configurable via config.toml
+- Featured images and image filter effect works
+- Social menu icons all ported using Hugo's built-in menus
+- Syntax highlighting included with the Monokai Light syntax theme
+
 ## Installation
 
 From the root of your site:
@@ -18,13 +25,6 @@ From the root of your site:
 
 `git submodule update --remote --merge`
 
-## Highlights
-
-- Accent color configurable via config.toml
-- Featured images and image filter effect works
-- Social menu icons all ported using Hugo's built-in menus
-- Syntax highlighting included with the Monokai Light syntax theme
-
 ## Differences from original theme
 
 - Comment stuff has been omitted
@@ -35,20 +35,17 @@ From the root of your site:
 - To set a featured image for a post or page, add `image: /path/to/image.jpg` to your frontmatter.
 - 
 
-## Available `config.toml` params
+## Available Site Params
 
-These go in `config.toml` in a `[params]` section like this:
+Some theme features can be configured in `config.toml`. Here are the options:
 
 ```toml
 [params]
-  accent_color = "#FF0000"
-  description = "This is the site tagline."
+  accent_color = "#FF0000" # Set a custom accent color for links and image filters, if enabled. Defaults to blue.
+  description = "This is the site tagline." # Adds tagline next to the site title.
+  privacy_link = "/privacy/" # Relative URL to privacy page, if there is one. This enables a Privacy Policy link in the footer. The link doesn't display if this isn't specified.
+  disable_image_filters = false # Setting to true disables the color filter feature on images. Defaults to false.
 ```
-
-- `accent_color = "#FF0000"` Set a custom accent color for links and image filters, if enabled. Defaults to blue.
-- `privacy_link = "/privacy/"` Relative URL to privacy page, if there is one. This enables a Privacy Policy link in the footer.
-- `description = "This is the site tagline."` Adds tagline next to the site title.
-- `disable_image_filters = false` Setting to true disables the color filter feature on images. Defaults to false.
 
 ## Syntax Highlighting
 
