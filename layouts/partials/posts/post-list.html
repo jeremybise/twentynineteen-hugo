@@ -1,4 +1,6 @@
-{{ range where .Pages.ByPublishDate.Reverse "Section" "posts" }}
+{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+
+{{ range $paginator.Pages }}
   <article class="post entry">
     <header class="entry-header">
       <h2 class="entry-title">
@@ -23,3 +25,30 @@
     </footer>
   </article>
 {{ end }}
+
+<nav class="navigation pagination" role="navigation">
+  <h2 class="screen-reader-text">Posts navigation</h2>
+  <div class="nav-links">
+    {{ if $paginator.HasPrev }}
+      <a class="prev page-numbers" href="{{ $paginator.Prev.URL }}">
+        {{ partial "icons/ui/chevron-left" }}
+        <span class="nav-prev-text">Newer posts</span>
+      </a>
+    {{ end }}
+
+    {{ range $paginator.Pagers }}
+      {{ if eq . $paginator }}
+        <span aria-current="page" class="page-numbers current">{{ .PageNumber }}</span>
+      {{ else }}
+        <a href="{{ .URL }}" class="page-numbers">{{ .PageNumber }}</a>
+      {{ end }}
+    {{ end }}
+
+    {{ if $paginator.HasNext }}
+      <a class="next page-numbers" href="{{ $paginator.Next.URL }}">
+        <span class="nav-next-text">Older posts</span>
+        {{ partial "icons/ui/chevron-right" }}
+      </a>
+    {{ end }}
+  </div>
+</nav>
