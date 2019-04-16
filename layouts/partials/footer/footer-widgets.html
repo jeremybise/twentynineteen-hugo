@@ -1,1 +1,20 @@
-I'm footer widgets...
+<aside class="widget-area" role="complementary" aria-label="Footer">
+  <div class="widget-column">
+    <section id="search" class="widget widget_search">
+        <h2 class="widget-title">Search</h2>
+    </section>
+    <section id="recent-posts" class="widget widget_recent_entries">
+        <h2 class="widget-title">Recent Posts</h2>
+    </section>
+    <section id="categories" class="widget widget_categories">
+      <h2 class="widget-title">Tags</h2>
+      <ul>
+        {{ range .Site.Taxonomies.tags }}
+        <li class="cat-item">
+          <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
+</aside>
