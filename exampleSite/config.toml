@@ -22,13 +22,17 @@ description = "TwentyNineteen ported from WordPress"
 # Menus
 [menu]
   [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
     name = "Tags"
     url = "/tags/"
-    weight = 1
+    weight = 2
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 3
   [[menu.social]]
     identifier = "github"
     name = "Github"
