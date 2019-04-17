@@ -47,6 +47,7 @@ $color__border-abbr: #666;
 @import "site/secondary/widgets";
 @import "blocks/blocks";
 @import "media/media";
+@import "syntax";
 
 .entry-footer svg, .entry-meta svg {
   width: 16px;
@@ -61,12 +62,12 @@ $color__border-abbr: #666;
   padding: 0.8rem;
   font-size: 0.8rem;
   border-radius: 0.3rem;
-  background-color: #fafafa;
+  background-color: #F7FAFC;
   color: #272822;
 }
 
 .site-main code {
-  background-color: #fafafa;
+  background-color: #F7FAFC;
   color: #272822;
   font-size: 0.8rem;
   padding: 2px 4px;
