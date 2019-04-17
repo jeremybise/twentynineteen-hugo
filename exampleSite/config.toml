@@ -19,8 +19,16 @@ Home = ["HTML", "RSS", "JSON"]
 privacy_link = "/privacy/"
 description = "TwentyNineteen ported from WordPress"
 
-# Social menu
+# Menus
 [menu]
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
   [[menu.social]]
     identifier = "github"
     name = "Github"
@@ -29,3 +37,7 @@ description = "TwentyNineteen ported from WordPress"
     identifier = "twitter"
     name = "Twitter"
     url = "https://twitter.com/gohugoio"
+  [[menu.footer]]
+    name = "About"
+    url = "/about/"
+    weight = 1
