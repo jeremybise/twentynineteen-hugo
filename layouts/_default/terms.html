@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <article class="post entry">
+    <div class="entry-header">
+      <h1 class="entry-title">{{ .Title }}</h1>
+    </div>
+    <div class="entry-content">
+      <ul>
+        {{ $type := .Type }}
+        {{ range $key, $value := .Data.Terms.ByCount }}
+          {{ $name := .Name }}
+          {{ $count := .Count }}
+          {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+          <li>
+            {{ printf "(%d)" $count }}
+            <a href="{{ .Permalink }}">
+              {{ $name }}
+            </a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </article>
+{{ end }}
