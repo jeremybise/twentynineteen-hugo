@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <header class="page-header">
+    <h1 class="page-title">
+      Search results for:
+      <form action="{{ "search" | absURL }}">
+        <input placeholder="Search..." id="search-query" name="s" class="searchPage-field" />
+      </form>
+    </h1>
+  </header>
+
+  <div id="search-results"></div>
+
+  <script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+      <article class="post entry">
+        <header class="entry-header">
+          <h2 class="entry-title"><a href="${link}">${title}</a></h2>
+        </header>
+      <div class="entry-content">
+        <p>${snippet}</p>
+      </div>
+      <div class="entry-footer">
+      ${ isset tags }<span class="cat-links">Tags: ${tags}</span>${ end }
+      ${ isset categories }<p>Categories: ${categories}</p>${ end }
+      </div>
+      </article>
+    </div>
+  </script>
+{{ end }}
+
+{{ define "footer_scripts" }}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+  <script src="{{ "js/search.js" | absURL }}"></script>
+{{ end }}

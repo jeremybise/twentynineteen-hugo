@@ -87,6 +87,25 @@ pygmentsUseClasses=true
 pygmentsCodefences=true
 ```
 
+## Search
+
+Add the JSON output format to your `config.toml` to create the index:
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+```
+
+Add `search.md` at the root of your `content` folder with the following frontmatter:
+
+```yaml
+---
+title: "Search"
+type: static
+layout: search
+---
+```
+
 ## Google Analytics
 
 Add your Google Analytics Tracking Code ID to your `config.toml`:
@@ -95,6 +114,7 @@ Add your Google Analytics Tracking Code ID to your `config.toml`:
 
 The asynchronous tracking script will be included on pages on the live server, but not the dev server.
 
-## Roadmap
+## Getting Help
 
-- [ ] Include search via Lunr or Fuse
+
+## Contributing
