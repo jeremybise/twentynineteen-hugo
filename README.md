@@ -1,6 +1,6 @@
 # Twenty Nineteen Hugo
 
-This is a [Hugo](https://gohugo.io) port of WordPress's Twenty Nineteen theme.
+This is a [Hugo](https://gohugo.io) port of WordPress's [Twenty Nineteen](https://github.com/wordpress/twentynineteen) theme.
 
 ## Highlights
 
@@ -51,7 +51,7 @@ Some theme features can be configured in `config.toml`. Here are the options:
 
 The theme includes three menu locations: `main`, `social` and `footer`.
 
-You can include pages in the `main` and `footer` menus using any of Hugo's [documented methods]().
+You can include pages in the `main` and `footer` menus using any of Hugo's [documented methods](https://gohugo.io/content-management/menus/).
 
 Sub menus work one level deep. For example, in your frontmatter:
 
