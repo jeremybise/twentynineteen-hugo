@@ -110,11 +110,6 @@ Add your Google Analytics Tracking Code ID to your `config.toml`:
 
 The asynchronous tracking script will be included on pages on the live server, but not the dev server.
 
-## Getting Help
-
-
-## Contributing
-
 ## License
 
 Open sourced under the [GPL license](https://github.com/jaden/twentyfourteen/blob/master/LICENSE.md) (inherited from the original theme)
