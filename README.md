@@ -79,15 +79,6 @@ The social menu can be configured in `config.toml` following this example:
 
 The theme uses the `identifier` to determine which icon to show. For a listing of which icons are available, check out the [social icons partial folder](https://github.com/jeremybise/twentynineteen-hugo/tree/master/layouts/partials/icons/social).
 
-## Syntax Highlighting
-
-Add pygments config to your `config.toml`:
-
-```toml
-pygmentsUseClasses=true
-pygmentsCodefences=true
-```
-
 ## Search
 
 Add the JSON output format to your `config.toml` to create the index:
