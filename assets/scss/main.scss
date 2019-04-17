@@ -1,3 +1,5 @@
+@import "normalize";
+
 // Backgrounds
 $color__background-body: #fff;
 $color__background-input: #fff;
@@ -34,7 +36,6 @@ $color__border-abbr: #666;
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-@import "normalize";
 @import "typography/typography";
 @import "elements/elements";
 @import "forms/forms";
@@ -181,4 +182,8 @@ figure {
 			max-width: 100%;
 		}
 	}
+}
+
+.capitalize {
+	text-transform: capitalize;
 }

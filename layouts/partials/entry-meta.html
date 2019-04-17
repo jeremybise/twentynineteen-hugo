@@ -6,7 +6,7 @@
 
 {{ $tags := slice }}
 {{ with .Params.tags }}
-<span class="cat-links">
+<span class="tags-links">
   {{ partial "icons/ui/tag" }}
   <span class="screen-reader-text">Posted in</span>
   {{ range . }}
@@ -15,5 +15,19 @@
   {{ $tags = $tags | append $element }}
   {{ end }}
   {{ delimit $tags ", " }}
+</span>
+{{ end }}
+
+{{ $categories := slice }}
+{{ with .Params.categories }}
+<span class="cat-links">
+  {{ partial "icons/ui/archive" }}
+  <span class="screen-reader-text">Posted in</span>
+  {{ range . }}
+  {{ $href := print ("categories/" | absLangURL) (. | urlize) "/" }}
+  {{ $element := printf "<a href=\"%s\" rel=\"category tag\">%s</a>" $href . }}
+  {{ $categories = $categories | append $element }}
+  {{ end }}
+  {{ delimit $categories ", " }}
 </span>
 {{ end }}
