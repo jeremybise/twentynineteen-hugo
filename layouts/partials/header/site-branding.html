@@ -14,9 +14,25 @@
       <ul id="menu-main" class="main-menu">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <li class="menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+          {{ if .HasChildren }}
+            <li class="menu-item menu-item-has-children {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+              <a href="{{ .URL }}" aria-haspopup="true" aria-expanded="false">{{ .Name }}</a>
+              <button class="submenu-expand" tabindex="-1">
+                {{ partial "icons/ui/keyboard-arrow-down" }}
+              </button>
+              <ul class="sub-menu">
+                  {{ range .Children }}
+                    <li class="menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                      <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                  {{ end }}
+                </ul>
+            </li>
+          {{ else }}
+            <li class="menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
         {{ end }}
       </ul>
     </div>
