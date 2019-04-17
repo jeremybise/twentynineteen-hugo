@@ -2,6 +2,10 @@
 
 This is a [Hugo](https://gohugo.io) port of WordPress's [Twenty Nineteen](https://github.com/wordpress/twentynineteen) theme.
 
+A demo showing a few more features than the Hugo theme gallery allows us to show can be found here:
+
+https://twentynineteen-hugo-demo.netlify.com/
+
 ## Highlights
 
 - Accent color configurable via config.toml
