@@ -9,6 +9,7 @@ This is a [Hugo](https://gohugo.io) port of WordPress's [Twenty Nineteen](https:
 - Featured image filter effect works and can be disabled
 - Menu locations and social menu icons all work using Hugo's built-in menus
 - Syntax highlighting included with the Monokai Light syntax theme
+- Image alignment and caption styles ported to work nicely Hugo's built-in [figure shortcode](https://gohugo.io/content-management/shortcodes/#figure)
 
 ## Installation
 
