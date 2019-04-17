@@ -119,3 +119,7 @@ The asynchronous tracking script will be included on pages on the live server, b
 
 
 ## Contributing
+
+## License
+
+Open sourced under the [GPL license](https://github.com/jaden/twentyfourteen/blob/master/LICENSE.md) (inherited from the original theme)
