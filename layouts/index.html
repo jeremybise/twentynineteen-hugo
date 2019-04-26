@@ -1,3 +1,65 @@
 {{ define "main" }}
-  {{ partial "posts/post-list" . }}
+{{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+
+{{ range $paginator.Pages }}
+  <article class="post entry">
+    <header class="entry-header">
+      <h2 class="entry-title">
+        <a href="{{ .RelPermalink }}" rel="bookmark">{{.Title}}</a>
+      </h2>
+    </header>
+
+    {{ if .Params.image }}
+      <figure class="post-thumbnail">
+        <a class="post-thumbnail-inner" href="{{ .RelPermalink }}" aria-hidden="true">
+          <img src="{{ .Params.image }}" />
+        </a>
+      </figure>
+    {{ end }}
+
+    <div class="entry-content">
+      {{ .Summary | markdownify }}
+      {{ if .Truncated }}
+        <div>
+          <a href="{{ .RelPermalink }}" class="more-link">
+            Continue reading
+          </a>
+        </div>
+      {{ end }}
+    </div>
+    
+    <footer class="entry-footer">
+      {{ partial "entry-meta" . }}
+    </footer>
+  </article>
+{{ end }}
+
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="navigation pagination" role="navigation">
+  <h2 class="screen-reader-text">Posts navigation</h2>
+  <div class="nav-links">
+    {{ if $paginator.HasPrev }}
+      <a class="prev page-numbers" href="{{ $paginator.Prev.URL }}">
+        {{ partial "icons/ui/chevron-left" }}
+        <span class="nav-prev-text">Newer posts</span>
+      </a>
+    {{ end }}
+
+    {{ range $paginator.Pagers }}
+      {{ if eq . $paginator }}
+        <span aria-current="page" class="page-numbers current">{{ .PageNumber }}</span>
+      {{ else }}
+        <a href="{{ .URL }}" class="page-numbers">{{ .PageNumber }}</a>
+      {{ end }}
+    {{ end }}
+
+    {{ if $paginator.HasNext }}
+      <a class="next page-numbers" href="{{ $paginator.Next.URL }}">
+        <span class="nav-next-text">Older posts</span>
+        {{ partial "icons/ui/chevron-right" }}
+      </a>
+    {{ end }}
+  </div>
+</nav>
+{{ end }}
 {{ end }}

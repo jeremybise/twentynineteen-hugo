@@ -13,7 +13,7 @@
     <section id="recent-posts" class="widget widget_recent_entries">
       <h2 class="widget-title">Recent Posts</h2>
       <ul>
-        {{ range first 5 (where .Site.Pages.ByPublishDate.Reverse "Section" "post") }}
+        {{ range first 5 (where site.RegularPages.ByPublishDate.Reverse "Type" "in" site.Params.mainSections) }}
         <li>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>

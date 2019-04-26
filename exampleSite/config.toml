@@ -3,10 +3,6 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "twentynineteen-hugo"
 
-# Syntax highlighting
-pygmentsUseClasses=true
-pygmentsCodefences=true
-
 # Pagination
 paginate = 5
 
