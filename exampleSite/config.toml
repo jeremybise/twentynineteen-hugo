@@ -26,7 +26,7 @@ description = "TwentyNineteen ported from WordPress"
     url = "/tags/"
     weight = 2
   [[menu.main]]
-    name = "About"
+    name = "About Hugo"
     url = "/about/"
     weight = 3
   [[menu.social]]
