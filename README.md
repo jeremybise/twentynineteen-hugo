@@ -2,10 +2,6 @@
 
 This is a [Hugo](https://gohugo.io) port of WordPress's [Twenty Nineteen](https://github.com/wordpress/twentynineteen) theme.
 
-A demo showing a few more features than the Hugo theme gallery allows us to show can be found here:
-
-https://twentynineteen-hugo-demo.netlify.com/
-
 ## Highlights
 
 - Accent color configurable via config.toml
@@ -112,4 +108,4 @@ The asynchronous tracking script will be included on pages on the live server, b
 
 ## License
 
-Open sourced under the [GPL license](https://github.com/jaden/twentyfourteen/blob/master/LICENSE.md) (inherited from the original theme)
+Open sourced under the [GPL license](https://github.com/jeremybise/twentynineteen-hugo/blob/master/LICENSE.md) (inherited from the original theme)
