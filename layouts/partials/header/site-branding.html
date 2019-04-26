@@ -1,6 +1,6 @@
 <div class="site-branding">
   <h1 class="site-title">
-    <a href="/" rel="home">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}" rel="home">{{ .Site.Title }}</a>
   </h1>
 
   {{ with .Site.Params.description }}
