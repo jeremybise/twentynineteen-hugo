@@ -61,7 +61,7 @@
     }
 
     function executeSearch(searchQuery) {
-      $.getJSON({{ "/index.json" | absURL }}, function(data) {
+      $.getJSON({{ "index.json" | absURL }}, function(data) {
         var pages = data;
         var fuse = new Fuse(pages, fuseOptions);
         var result = fuse.search(searchQuery);
