@@ -35,6 +35,14 @@ $color__border-input: $color__border;
 $color__border-abbr: #666;
 
 @import "variables-site/variables-site";
+
+{{ if $.Site.Params.body_font }}
+	{{ if $.Site.Params.using_google_fonts}}
+		@import url('https://fonts.googleapis.com/css?family={{ $.Site.Params.body_font }}&display=swap');
+	{{ end }}
+	$font__body: {{ $.Site.Params.body_font }};
+{{ end }}
+
 @import "mixins/mixins-master";
 @import "typography/typography";
 @import "elements/elements";
@@ -49,6 +57,7 @@ $color__border-abbr: #666;
 @import "blocks/blocks";
 @import "media/media";
 @import "syntax";
+
 
 .entry-footer svg, .entry-meta svg {
   width: 16px;
