@@ -35,6 +35,7 @@ From the root of your site:
 ## Content Notes
 
 - To set a featured image for a post or page, add `image: /path/to/image.jpg` to your post or page's frontmatter.
+- If your article will include a snippet of code, set `has_code: true` to activate syntax highlighting.
 
 ## Available Site Params
 
@@ -46,6 +47,7 @@ Some theme features can be configured in `config.toml`. Here are the options:
   description = "This is the site tagline." # Adds tagline next to the site title.
   privacy_link = "/privacy/" # Relative URL to privacy page, if there is one. This enables a Privacy Policy link in the footer. The link doesn't display if this isn't specified.
   disable_image_filters = false # Setting to true disables the color filter feature on images. Defaults to false.
+  code_theme = "solarized-dark" # Setup the syntax highlighting code you want to use if you will use code, defaults to monokai (see available styles here: https://github.com/highlightjs/highlight.js/tree/master/src/styles)
 ```
 
 ## Menus
