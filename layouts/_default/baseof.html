@@ -18,6 +18,8 @@
   {{ block "header_styles" . }}
   <!-- Optional header styles -->
   {{ end }}
+  {{ partial "google-analytics-async.html" . }}
+
 </head>
 
 <body class="{{ if not .Site.Params.disable_image_filters }}image-filters-enabled{{ end }} archive">
@@ -50,6 +52,5 @@
   <!-- Optional footer scripts. -->
   {{ end }}
   
-  {{ partial "google-analytics-async.html" . }}
 </body>
 </html>
