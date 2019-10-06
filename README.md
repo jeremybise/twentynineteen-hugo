@@ -35,6 +35,7 @@ From the root of your site:
 ## Content Notes
 
 - To set a featured image for a post or page, add `image: /path/to/image.jpg` to your post or page's frontmatter.
+- If your article will include a snippet of code, set `has_code: true` to activate syntax highlighting.
 
 ## Available Site Params
 
@@ -48,6 +49,7 @@ Some theme features can be configured in `config.toml`. Here are the options:
   disable_image_filters = false # Setting to true disables the color filter feature on images. Defaults to false.
   body_font = "Source Sans Pro" # Customizing the body font
   using_google_fonts = true # Set up this to true if your font is from Google fonts
+  code_theme = "solarized-dark" # Setup the syntax highlighting code you want to use if you will use code, defaults to monokai (see available styles here: https://github.com/highlightjs/highlight.js/tree/master/src/styles)
 ```
 
 ## Menus
