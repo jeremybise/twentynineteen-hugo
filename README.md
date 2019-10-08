@@ -46,6 +46,8 @@ Some theme features can be configured in `config.toml`. Here are the options:
   description = "This is the site tagline." # Adds tagline next to the site title.
   privacy_link = "/privacy/" # Relative URL to privacy page, if there is one. This enables a Privacy Policy link in the footer. The link doesn't display if this isn't specified.
   disable_image_filters = false # Setting to true disables the color filter feature on images. Defaults to false.
+  body_font = "Source Sans Pro" # Customizing the body font
+  using_google_fonts = true # Set up this to true if your font is from Google fonts
 ```
 
 ## Menus
