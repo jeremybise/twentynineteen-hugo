@@ -1,10 +1,11 @@
 
 
 // Font and typographic variables
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
 
 $font__body: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
 $font__heading: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$font__code: Menlo, monaco, Consolas, Lucida Console, monospace;
+$font__code: Fira Code, Menlo, monaco, Consolas, Lucida Console, monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 
 $font__size_base: 22px;
