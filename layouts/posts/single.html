@@ -1,3 +1,11 @@
+
+{{ define "header_styles"}}
+  {{ if .Params.has_code }}
+  <link rel="stylesheet"
+        href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/{{ $.Site.Params.code_theme | default "monokai" }}.min.css'>
+  {{ end }}
+{{ end }}
+
 {{ define "entry_header" }}
   {{ if .Params.image }}
     <div class="site-featured-image">
@@ -56,4 +64,20 @@
     {{ end }}
     </div>
   </nav>
+
+  {{ if .Params.comments }}
+    <div class="comments-area">
+      {{ template "_internal/disqus.html" . }}
+    </div>
+  {{ end }}
+{{ end }}
+
+{{ define "footer_scripts" }}
+
+  {{ if .Params.has_code }}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+  {{ end }}
 {{ end }}
